@@ -45,6 +45,9 @@ namespace PruebaExcelFormat
             /*mandamos la lista de datos que queremos agregar al excel*/
             var resp =  excel.NewContent(lista);
             /*si la respuesta el tru el excel fue generado con exito */
+            
+            excel.Ubicacion();/*para la ubicacion del archivo*/
+            excel.Delete();/*elimina el archi si no quiere dejar registro*/
             Console.WriteLine(resp.Result);       
         }
     }
